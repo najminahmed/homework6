@@ -37,6 +37,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 
     else {
         video.muted = false;
+	    document.getElementById("mute").innerHTML = "Mute";
     }
 });
 
