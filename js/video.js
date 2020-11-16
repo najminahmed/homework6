@@ -18,17 +18,20 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate: .1;
+	console.log(video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	console.log("Pause Video");
-	video.pause();
+	video.playbackRate: 1.1;
+	console.log(video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime+=5;
 	if (video.ended === true) {    
            video.loop = true;
+	}
+	console.log(video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -52,5 +55,5 @@ document.querySelector("#original").addEventListener("click", function() {
 });
 
 document.querySelector("#volumeSlider").addEventListener("change", function() {
-	video.classList.remove("oldTime");
+	
 });
