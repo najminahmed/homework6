@@ -17,8 +17,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	console.log("Pause Video");
-	video.pause();
+	video.playbackRate: .1;
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
@@ -27,7 +26,9 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime(video.currentTime() + 5);
+	video.currentTime+=5;
+	if (video.ended === true) {    
+           video.loop = true;
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -47,5 +48,9 @@ document.querySelector("#old").addEventListener("click", function() {
 });
 
 document.querySelector("#original").addEventListener("click", function() {
+	video.classList.remove("oldTime");
+});
+
+document.querySelector("#volumeSlider").addEventListener("change", function() {
 	video.classList.remove("oldTime");
 });
