@@ -31,5 +31,5 @@ document.querySelector("#skip").addEventListener("click", function() {
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
-	video.mute: true;
+	video.muted;
 });
