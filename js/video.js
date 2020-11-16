@@ -26,8 +26,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Pause Video");
-	video.pause();
+	video.currentTime(video.currentTime() + 5);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
