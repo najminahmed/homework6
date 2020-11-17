@@ -27,14 +27,19 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime+=5;
-	if (video.ended === true) {    
-           video.loop = true;
+	if (video.cuurentTime < video.duration - 5){
+		video.currentTime += 5;
 	}
-	console.log(video.currentTime);
+	else {
+		video.currentTime = 0;
+		console.log("Start from beginning");
+	}
+	video.play()
+	console.log("Skip Ahead " + video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
+	console.log("Mute");
 	if (video.muted === false) {    
            video.muted = true;
 		document.getElementById("mute").innerHTML = "Unmute";
@@ -46,6 +51,12 @@ document.querySelector("#mute").addEventListener("click", function() {
     }
 });
 
+document.querySelector("#volumeSlider").addEventListener("change", function() {
+	video.volume = this.value/100;
+	volume.innerHTML = this.value+'%';
+	console.log("Volume ");
+});
+
 document.querySelector("#old").addEventListener("click", function() {
 	video.classList.add("oldTime");
 });
@@ -54,6 +65,4 @@ document.querySelector("#original").addEventListener("click", function() {
 	video.classList.remove("oldTime");
 });
 
-document.querySelector("#volumeSlider").addEventListener("change", function() {
-	
-});
+
