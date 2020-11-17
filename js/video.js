@@ -27,7 +27,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	if (video.cuurentTime < video.duration - 5){
+	if (video.currentTime < video.duration - 5){
 		video.currentTime += 5;
 	}
 	else {
