@@ -17,13 +17,13 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate: .1;
-	console.log(video.playbackRate);
+	video.playbackRate *- .9;
+	console.log("Slow Down " + video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate: 1.1;
-	console.log(video.playbackRate);
+	video.playbackRate /- .9;
+	console.log("Speed Up " + video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
